@@ -3,9 +3,8 @@ import mimetypes
 import boto3
 
 def main():
-    # Specify the directory containing your files (relative to the GitHub Actions workspace)
     directory = '.'  # Root directory of the repository
-    bucket_name = '21itr077'
+    bucket_name = 'nivethaterraformportfolio'  # Ensure this matches the bucket created in Terraform
     
     # Retrieve AWS credentials from environment variables
     aws_access_key_id = os.getenv('AWS_ACCESS_KEY_ID')
