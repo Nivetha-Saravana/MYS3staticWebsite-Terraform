@@ -1,0 +1,400 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 1rem;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.home {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.home h2 {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+}
+
+.home .typing-text {
+    color: #095a0d;
+    font-weight: bold;
+}
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 60%;
+}
+
+.gif-container {
+    flex: 0 0 auto;
+    max-width: 35%;
+}
+
+.cool-gif {
+    width: 100%;
+    height: auto;
+}
+
+.heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.row .info, .row .content {
+    max-width: 500px;
+    margin: 1rem;
+}
+
+.row .box {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.row .box h3 {
+    margin: 0.5rem 0;
+}
+
+.progress {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bar {
+    background: #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+    position: relative;
+}
+
+.bar span {
+    display: block;
+    height: 20px;
+    background:#095a0d;
+    width: 0;
+    animation: progressAnimation 2s forwards;
+}
+
+@keyframes progressAnimation {
+    0% { width: 0; }
+    100% { width: var(--percentage); }
+}
+
+/* Contact Form */
+form {
+    max-width: 500px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form .box {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form .btn {
+    background: #095a0d;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project-card {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.project-info h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-links a {
+    text-decoration: none;
+    color:#095a0d;
+    font-weight: bold;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* General Container Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header and Home Section Styling */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header .user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+header .navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+header .navbar li {
+    margin: 0 1rem;
+}
+
+header .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.home {
+    padding: 2rem 0;
+    background: #333;
+    text-align: center;
+}
+
+.home .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home h2 {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+}
+
+.home .typing-text {
+    color:#095a0d;
+    font-weight: bold;
+}
+
+.home .share {
+    margin-top: 1rem;
+}
+
+.home .share a {
+    color: #333;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.home .share a:hover {
+    color:#095a0d;
+}
+
+/* Education Section Styling */
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.education-card {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    transition: transform 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-10px);
+}
+
+.education-icon {
+    font-size: 2rem;
+    color:#095a0d;
+    margin-right: 1rem;
+}
+
+.education-info {
+    flex: 1;
+}
+
+.education-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.education-info h4 {
+    font-size: 1rem;
+    color: #666;
+}
+
+.education-info span {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+.skill-item {
+    text-align: center; /* Center-align content */
+    width: 160px; /* Adjusted width for better alignment */
+}
+
+.skill-item i {
+    font-size: 3rem;
+    color: #095a0d;
+    margin-bottom: 10px; /* Increased margin for spacing */
+    display: block; /* Ensures icon is centered */
+}
+
+.skill-item h4 {
+    font-size: 1.2rem; /* Increased font size for better readability */
+    color: #333;
+    margin-bottom: 0; /* Adjusted margin */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .skill-item {
+        width: 120px;
+    }
+    
+    .skill-item i {
+        font-size: 2.5rem;
+    }
+    
+    .skill-item h4 {
+        font-size: 1rem;
+    }
+}
+.contacts {
+    
+    text-align: center; /* Center-align the content */
+    padding: 20px 0; /* Add some padding for spacing */
+}
+.info {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f2f2f2;
+}
+.info h3 {
+    margin-bottom: 10px;
+}
+
+
+
+
