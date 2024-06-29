@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "mybucket" {
-  bucket = "nivethaterraformportfolio-new"
+  bucket = "Portfolio-terraformport"
 
   website {
     index_document = "index.html"
