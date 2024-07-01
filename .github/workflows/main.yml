@@ -41,7 +41,7 @@ jobs:
       - name: Run Python script
         run: |
           source venv/bin/activate
-          python script.py  # Ensure this matches the name of your Python script
+          python main.py  # Ensure this matches the name of your Python script
 
       - name: Deploy Application to S3
         run: aws s3 sync . s3://Portfolio-terraformport --acl public-read
