@@ -26,22 +26,24 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
+      
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # Replace '3.x' with your desired Python version
+          python-version: '3.x'
 
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: |
-          python -m venv venv
-          source venv/bin/activate
-          pip install boto3  # Install boto3 if not already included in requirements.txt
+          python -m pip install --upgrade pip
+          pip install boto3
 
-      - name: Run Python script
+      - name: Run deploy script
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          source venv/bin/activate
-          python main.py  # Ensure this matches the name of your Python script
+          python main.py
+
 
       - name: Deploy Application to S3
         run: aws s3 sync . s3://portfolioterraformport --acl public-read
