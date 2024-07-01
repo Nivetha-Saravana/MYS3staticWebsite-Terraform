@@ -3,13 +3,17 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "mybucket" {
-  bucket = "Portfolio-terraformport"
+  bucket = "portfolioterraformport"  # Ensure the bucket name is all lowercase
+}
 
-  website {
-    index_document = "index.html"
-    error_document = "error.html"
+resource "aws_s3_bucket_website_configuration" "mybucket_website" {
+  bucket = aws_s3_bucket.mybucket.id
+
+  index_document {
+    suffix = "index.html"
   }
 }
+
 
 resource "aws_s3_bucket_ownership_controls" "example" {
   bucket = aws_s3_bucket.mybucket.id
