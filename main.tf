@@ -1,19 +1,15 @@
 provider "aws" {
-  region = "ap-south-1"  // or "us-west-2"
+  region = "us-west-2"  // or "us-west-2"
 }
 
 resource "aws_s3_bucket" "mybucket" {
-  bucket = "portfolioterraformport"  # Ensure the bucket name is all lowercase
-}
+  bucket = "portfolioterraform"
 
-resource "aws_s3_bucket_website_configuration" "mybucket_website" {
-  bucket = aws_s3_bucket.mybucket.id
-
-  index_document {
-    suffix = "index.html"
+  website {
+    index_document = "index.html"
+    error_document = "error.html"
   }
 }
-
 
 resource "aws_s3_bucket_ownership_controls" "example" {
   bucket = aws_s3_bucket.mybucket.id

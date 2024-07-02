@@ -4,7 +4,7 @@ import boto3
 
 def main():
     directory = '.'  # Root directory of the repository
-    bucket_name = 'Portfolioterraformport'  
+    bucket_name = 'Portfolioterraform'  
     
     # Retrieve AWS credentials from environment variables
     aws_access_key_id = os.getenv('AWS_ACCESS_KEY_ID')
