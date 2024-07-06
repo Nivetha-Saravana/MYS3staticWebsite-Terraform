@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "mybucket" {
-  bucket = "portfolioterraform"
+  bucket = "portfolioterraform1"
 
   website {
     index_document = "index.html"
