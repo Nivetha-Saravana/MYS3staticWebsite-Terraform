@@ -5,7 +5,7 @@ import boto3
 def main():
     # Specify the directory containing your files (relative to the GitHub Actions workspace)
     directory = '.'  # Root directory of the repository
-    bucket_name = 'Portfolioterraform'
+    bucket_name = 'Portfolioterraform1'
     
     # Retrieve AWS credentials from environment variables
     aws_access_key_id = os.getenv('AWS_ACCESS_KEY_ID')
