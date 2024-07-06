@@ -1,9 +1,9 @@
 provider "aws" {
-  region = "us-west-2"  // or "us-west-2"
+  region = "us-west-2" 
 }
 
 resource "aws_s3_bucket" "mybucket" {
-  bucket = "portfolioterraform1"
+  bucket = "terraformportfolio"
 
   website {
     index_document = "index.html"
